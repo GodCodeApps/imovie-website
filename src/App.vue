@@ -1,16 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header/>
+  <SubTitle msg="Welcome to Your iMovie"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import SubTitle from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    SubTitle
   }
+
 }
 </script>
 
@@ -20,7 +23,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 </style>
