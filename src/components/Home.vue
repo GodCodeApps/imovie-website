@@ -3,11 +3,11 @@
     <div id="div">
       <div id="div-store">
         <div>
-          <p style="color: white">爱电影客户端</p>
+          <p style=" font-size:28px;color: white">爱电影客户端</p>
           <div>
-            <img id="img-store" src="../assets/google-play.png">
-            <img id="img-store" src="../assets/app-store.png">
-            <img id="img-store" src="../assets/apk-zh.png">
+            <img id="img-store" src="../assets/google-play.png" @click="openGooglePlay()">
+            <img id="img-store" src="../assets/apk-zh.png" @click="openApkZh()">
+            <img id="img-store" src="../assets/app-store.png" @click="openAppStore()">
           </div>
         </div>
 
@@ -26,7 +26,8 @@
       </p>
 
       <div id="div-footer">
-        <li><a href="http://124.222.242.16:8082/privacy.html" style="color: #999999">用户隐私政策</a></li>-->
+        <li><a href="http://124.222.242.16:8082/privacy.html" style="color: #999999">用户隐私政策</a></li>
+        -->
       </div>
     </div>
     <!--    <h1>{{ msg }}</h1>-->
@@ -59,15 +60,49 @@
     <!--      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>-->
     <!--      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>-->
     <!--    </ul>-->
+
+
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'SubTitle',
   props: {
     msg: String
+  },
+  methods: {
+    openGooglePlay() {
+      window.open('https://play.google.com/store/apps/details?id=com.github.imovie', "_blank")
+
+    },
+    openAppStore() {
+      this.showToast("正在开发中，请耐心等待!")
+    },
+    openApkZh() {
+      var a = document.createElement('a')
+      a.download = name || 'apk'
+      a.href = 'http://124.222.242.16:8080/file/others/app-release-20220401061258600.apk';
+      a.click();
+    },
+    showToast(msg, duration) {
+      duration = isNaN(duration) ? 3000 : duration;
+      var m = document.createElement('div');
+      m.innerHTML = msg;
+      m.style.cssText = "width:50%; min-width:40px; background:#000; opacity:0.7; text-align:center; height:auto;min-height: 50px; color:#fff; line-height:50px; text-align:center; border-radius:4px; position:fixed; top:50%; left:20%; right:20%; z-index:999999;";
+      document.body.appendChild(m);
+      setTimeout(function () {
+        var d = 0.5;
+        m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+        m.style.opacity = '0';
+        setTimeout(function () {
+          document.body.removeChild(m)
+        }, d * 1000);
+      }, duration);
+    }
   }
+
 }
 </script>
 
@@ -96,13 +131,15 @@ export default {
   height: 40px;
   margin: 6px;
 }
-#p-gray{
+
+#p-gray {
   color: #656565;
   font-size: 0.32rem;
   line-height: 1.8;
   margin-right: 45px;
   margin-left: 45px;
 }
+
 #div-footer {
   width: 100%;
   height: 5.88rem;
