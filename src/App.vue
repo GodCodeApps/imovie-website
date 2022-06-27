@@ -1,19 +1,22 @@
 <template>
   <Header/>
-  <SubTitle msg="Welcome to Your iMovie"/>
+  <Body msg="Welcome to Your iMovie"/>
+  <Footer/>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import SubTitle from './components/Home.vue'
+import Header from './components/header.vue'
+import Body from './components/body.vue'
+import Footer from './components/footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    SubTitle
-  }
-
+    Body,
+    Footer
+  },
+  methods: {}
 }
 </script>
 
