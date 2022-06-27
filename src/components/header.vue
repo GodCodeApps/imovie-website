@@ -33,11 +33,11 @@ export default {
 
 <style scoped>
 #header {
-  width: 100%;
+  width: auto;
   height: 5rem;
   display: flex;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
   background-color: white;
   align-items: center;
 }

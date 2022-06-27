@@ -47,7 +47,7 @@ export default {
     openApkZh() {
       var a = document.createElement('a')
       a.download = name || 'apk'
-      a.href = 'http://124.222.242.16:8080/file/others/app-release-20220401061258600.apk';
+      a.href = 'http://124.222.242.16:8080/file/others/app-mainland-official-release-20220627043926688.apk';
       a.click();
     },
     showToast(msg, duration) {
@@ -86,19 +86,19 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left: 120px;
+  margin-left:2rem;
 }
 
 #img-store {
   height: 40px;
-  margin: 6px;
+  margin: 0.4rem;
 }
 
 #p-gray {
   color: #656565;
   font-size: 0.32rem;
   line-height: 1.8;
-  margin-right: 45px;
-  margin-left: 45px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 </style>

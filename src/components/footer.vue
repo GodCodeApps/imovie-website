@@ -15,8 +15,7 @@ export default {
 #div-footer {
   width: 100%;
   height: 4.88rem;
-  min-height: 110px;
-  margin-top: 18rem;
+  margin-top:20rem;
   background-color: #0D1119;
   display: flex;
   flex-direction: column;
