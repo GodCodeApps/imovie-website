@@ -6,8 +6,7 @@
       <h5 style="position: absolute;right: 25px; top: 10px" @mouseenter="contactWe"
           @click="contactWe">联系我们</h5>
       <div id="tl" v-if="isShow">
-        <a>QQ交流群:665754684</a>
-        <a style="margin-top: 4px">邮箱:xhxdeveloper@163.com</a>
+        <a href="https://jq.qq.com/?_wv=1027&k=CVmTOViF">QQ交流群:665754684</a>
         <a style="margin-top: 4px" href="https://ptcc.in/joinchat/1RmE94AsKtVQQFwx1WmzuA">Potato交流群</a>
       </div>
     </div>

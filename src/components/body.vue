@@ -47,7 +47,7 @@ export default {
     openApkZh() {
       var a = document.createElement('a')
       a.download = name || 'apk'
-      a.href = 'http://124.222.242.16:8080/file/others/app-mainland-official-release-20220627043926688.apk';
+      a.href = 'http://124.222.242.16:8080/file/others/app-mainland-official-release-20220713040710835.apk';
       a.click();
     },
     showToast(msg, duration) {
