@@ -54,7 +54,7 @@ export default {
       duration = isNaN(duration) ? 3000 : duration;
       var m = document.createElement('div');
       m.innerHTML = msg;
-      m.style.cssText = "width:50%; min-width:40px; background:#000; opacity:0.7; text-align:center; height:auto;min-height: 50px; color:#fff; line-height:50px; text-align:center; border-radius:4px; position:fixed; top:50%; left:20%; right:20%; z-index:999999;";
+      m.style.cssText = "width:50%; min-width:40px; background:#000; opacity:0.7; text-align:center; height:auto;min-height: 50px; color:#fff; line-height:50px; text-align:center; border-radius:4px; position:fixed; top:50%; left:20%; right:20%; z-index:999999; font-size: medium;";
       document.body.appendChild(m);
       setTimeout(function () {
         var d = 0.5;
@@ -86,7 +86,8 @@ export default {
   height: 100%;
   display: flex;
   align-items: center;
-  margin-left:2rem;
+  margin-left: 2rem;
+
 }
 
 #img-store {
