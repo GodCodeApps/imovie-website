@@ -7,7 +7,7 @@
           <div>
             <img id="img-store" src="../assets/google-play.png" @click="openGooglePlay()">
             <img id="img-store" src="../assets/apk-zh.png" @click="openApkZh()">
-            <img id="img-store" src="../assets/app-store.png" @click="openAppStore()">
+            <img id="img-store" src="../assets/app-store.png" @click="openAppStore()" style="visibility: hidden">
           </div>
         </div>
       </div>
